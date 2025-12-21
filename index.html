@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carson Lane — Project Portfolio</title>
+  <meta name="description" content="Portfolio showcasing StrideLine and Track Rater projects in sports technology and analytics." />
+
+  <style>
+    :root {
+      --max: 1080px;
+      --bg: #060a0b;
+      --bg-2: #0b1212;
+      --ink: #eaf5ef;
+      --muted: #a9c7b8;
+      --neon: #39ff14;
+      --neon-soft: rgba(57, 255, 20, 0.2);
+      --card: rgba(9, 18, 18, 0.85);
+      --stroke: rgba(57, 255, 20, 0.25);
+      --title-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      color: var(--ink);
+      background:
+        radial-gradient(1000px 600px at 10% -10%, rgba(57, 255, 20, 0.12), transparent 60%),
+        radial-gradient(900px 500px at 90% 10%, rgba(57, 255, 20, 0.08), transparent 65%),
+        linear-gradient(180deg, var(--bg), var(--bg-2));
+    }
+    header, main, footer {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 18px;
+    }
+    header { padding-top: 54px; }
+    h1, h2, h3 { font-family: var(--title-font); }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2.2rem, 2.6vw + 1.6rem, 3.6rem);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+    h2 { margin-top: 54px; color: #f4fff7; }
+    h3 { margin-top: 30px; color: #dff9ea; }
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      max-width: 760px;
+      font-size: 1.05rem;
+    }
+    nav {
+      margin-top: 22px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--ink);
+      border-bottom: 1px solid var(--stroke);
+      padding-bottom: 2px;
+    }
+    nav a:hover { color: var(--neon); }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+    .hero-card {
+      padding: 26px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(10, 20, 20, 0.85), rgba(6, 10, 11, 0.9));
+      border: 1px solid var(--stroke);
+      box-shadow: 0 0 28px rgba(57, 255, 20, 0.08);
+    }
+    .hero-media {
+      display: flex;
+      justify-content: center;
+    }
+    .headshot {
+      width: min(280px, 70vw);
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      object-position: center 15%;
+      border-radius: 999px;
+      border: 2px solid var(--neon);
+      box-shadow:
+        0 0 20px var(--neon-soft),
+        0 0 40px rgba(57, 255, 20, 0.12);
+    }
+    .feature-image {
+      width: 100%;
+      max-width: 920px;
+      border-radius: 16px;
+      border: 1px solid var(--stroke);
+      box-shadow: 0 0 26px rgba(57, 255, 20, 0.08);
+      display: block;
+      margin: 22px 0 10px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-top: 26px;
+    }
+    @media (min-width: 820px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+      .hero { grid-template-columns: 1.2fr 0.8fr; }
+      .hero-media { justify-content: flex-end; }
+    }
+    .card {
+      border: 1px solid var(--stroke);
+      border-radius: 16px;
+      padding: 18px;
+      background: var(--card);
+      box-shadow: 0 0 24px rgba(57, 255, 20, 0.06);
+    }
+    .pill {
+      display: inline-block;
+      font-size: .85rem;
+      color: var(--muted);
+      border: 1px solid var(--stroke);
+      border-radius: 999px;
+      padding: 4px 10px;
+      margin-right: 8px;
+      margin-top: 8px;
+    }
+    .links a { margin-right: 14px; color: var(--neon); }
+    .muted { color: var(--muted); }
+    ul { padding-left: 18px; }
+    footer {
+      padding-bottom: 48px;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    a { color: var(--neon); }
+    a:hover { color: #a6ff6f; }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="hero">
+    <div class="hero-card">
+      <h1>Carson Lane</h1>
+      <p class="subtitle">
+        Builder of sports technology and analytics systems, with an emphasis on clarity,
+        reproducibility, and the ethical implications of performance infrastructure.
+      </p>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#strideLine">StrideLine</a>
+        <a href="#trackRater">Track Rater</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="hero-media">
+      <img class="headshot" src="headshot.JPG" alt="Portrait of Carson Lane" />
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- PROJECT OVERVIEW -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="grid">
+
+      <article class="card">
+        <h3>StrideLine</h3>
+        <p>
+          A real-time pacing system for track & field that converts target performance into a visible,
+          moving reference around the track. Designed as shared infrastructure rather than private advantage.
+        </p>
+        <div>
+          <span class="pill">Hardware + Software</span>
+          <span class="pill">Real-time systems</span>
+          <span class="pill">Meet operations</span>
+        </div>
+        <p class="links">
+          <a href="#strideLine">Read case study</a>
+          <a href="https://stride-line.com" target="_blank" rel="noreferrer">Stride-Line.com</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Track Rater</h3>
+        <p>
+          A tool for high school track & field athletes to get a star and overall rating, plus see what
+          colleges they could potentially run at based on their level.
+        </p>
+        <div>
+          <span class="pill">Analytics</span>
+          <span class="pill">Ranking logic</span>
+          <span class="pill">Data integrity</span>
+        </div>
+        <p class="links">
+          <a href="#trackRater">Read case study</a>
+          <a href="https://trackrater.com" target="_blank" rel="noreferrer">TrackRater.com</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Procurement Item Sales Comparison Report</h3>
+        <p>
+          Built an automated sales comparison dashboard for Hy-Vee procurement decisions, focused on
+          clean data, repeatable reporting, and clear vendor performance signals.
+        </p>
+        <div>
+          <span class="pill">Excel + VBA</span>
+          <span class="pill">Power Query</span>
+          <span class="pill">SQL</span>
+        </div>
+        <p class="links">
+          <a href="#experience">Related experience</a>
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- STRIDELINE -->
+  <section id="strideLine">
+    <h2>StrideLine — Real-Time Pacing Infrastructure</h2>
+
+    <h3>Context and Motivation</h3>
+    <p>
+      Competitive pacing is often treated as an internal skill, yet race environments distort perception
+      through adrenaline, pack dynamics, and intermittent feedback. StrideLine externalizes pace by embedding
+      it directly into the environment as a continuously visible reference.
+    </p>
+    <img class="feature-image" src="lights_in_use.jpeg" alt="StrideLine pacing lights in use on the track" />
+
+    <h3>Problem Definition</h3>
+    <p>
+      Split boards, verbal cues, and watch checking make pacing inconsistent when precision matters most.
+      StrideLine defines pace as a constant visual reference rather than a private mental calculation.
+    </p>
+
+    <h3>Technical Approach</h3>
+    <ul>
+      <li><strong>System design:</strong> target times are translated into a moving visual reference.</li>
+      <li><strong>Real-time stability:</strong> deterministic behavior prioritized over feature density.</li>
+      <li><strong>Usability:</strong> can be controlled by coaches and meet staff.</li>
+    </ul>
+
+    <h3>Ethical Framing</h3>
+    <p>
+      StrideLine is positioned as shared infrastructure, visible to all competitors. Transparency is treated
+      as a core constraint to avoid asymmetric performance advantages.
+    </p>
+
+    <p class="links">
+      <a href="https://stride-line.com" target="_blank" rel="noreferrer">
+        See videos and learn more at Stride-Line.com
+      </a>
+    </p>
+  </section>
+
+  <!-- TRACK RATER -->
+  <section id="trackRater">
+    <h2>Track Rater — Transparent Athlete Evaluation</h2>
+
+    <h3>Problem</h3>
+    <p>
+      Athlete evaluation is often shaped by incomplete context and subjective interpretation. Track Rater
+      attempts to make comparison logic explicit and inspectable.
+    </p>
+
+    <h3>Approach</h3>
+    <ul>
+      <li>Performance data standardized for cross-context comparison.</li>
+      <li>Assumptions documented to reduce black-box scoring.</li>
+      <li>Ratings framed as indicators rather than definitive truth.</li>
+    </ul>
+
+    <h3>Limitations</h3>
+    <ul>
+      <li>Race tactics, injuries, and training cycles remain difficult to quantify.</li>
+      <li>Data gaps can bias outputs if not handled carefully.</li>
+    </ul>
+
+    <p class="links">
+      <a href="https://trackrater.com" target="_blank" rel="noreferrer">
+        Visit TrackRater.com
+      </a>
+    </p>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      This portfolio reflects an interest in building systems that function under real constraints,
+      where usability, reliability, and ethical implications matter as much as technical novelty.
+    </p>
+    <p class="muted">
+      B.B.A. in Business Analytics & Information Systems, The University of Iowa (Tippie College of Business).
+      Graduation: May 2026.
+    </p>
+    <p class="muted">
+      Skills: Python (pandas, NumPy) • SQL • VBA • HTML • Excel • Power Query • Power BI • Access • Jupyter
+      • ETL • Data visualization • Report automation • Statistical modeling • Regression analysis
+    </p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <article class="card">
+      <h3>Founder & Engineer — StrideLine</h3>
+      <p class="muted">Iowa City, IA • Aug 2025 – Present</p>
+      <ul>
+        <li>Engineered a custom LED pacing system for track & field races using Python, HTML, and Linux.</li>
+        <li>Integrated graphical control interfaces and networking scripts for smooth operations.</li>
+        <li>Designed and assembled hardware and electrical circuits in-field.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h3>Purchasing Intern — Hy-Vee Corporate</h3>
+      <p class="muted">West Des Moines, IA • May 2025 – Aug 2025</p>
+      <ul>
+        <li>Cleaned procurement datasets and improved data accuracy for reporting.</li>
+        <li>Built vendor performance comparisons to support purchasing decisions.</li>
+        <li>Collaborated across departments and vendors on data requests.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h3>Member Application & Data Support Analyst — IPERS</h3>
+      <p class="muted">Des Moines, IA • May 2024 – Aug 2024</p>
+      <ul>
+        <li>Supported member experiences through reliable data exchange and transactions.</li>
+        <li>Ran trend analysis to identify process improvements in user interactions.</li>
+        <li>Provided consistent customer support through member phone calls.</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- LEADERSHIP -->
+  <section id="leadership">
+    <h2>Athletic Leadership</h2>
+    <article class="card">
+      <h3>Team Leader — Men’s Track & Field, University of Iowa</h3>
+      <p class="muted">Aug 2023 – Present</p>
+      <ul>
+        <li>Mentored 50 Division I athletes, reinforcing discipline and consistent performance habits.</li>
+        <li>Relayed athlete concerns to coaching staff and supported team culture.</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Email: <a href="mailto:carsonlaneruns@gmail.com">carsonlaneruns@gmail.com</a><br />
+      Phone: <a href="tel:+15155122391">(515) 512-2391</a><br />
+      GitHub: <a href="https://github.com/Carsonlane" target="_blank" rel="noreferrer">@Carsonlane</a><br />
+      LinkedIn: <a href="https://www.linkedin.com/in/carson-rj-lane" target="_blank" rel="noreferrer">carson-rj-lane</a>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div>© <span id="year"></span> Carson Lane. Built with GitHub Pages.</div>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</footer>
+
+</body>
+</html>
